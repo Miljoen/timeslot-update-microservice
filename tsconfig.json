@@ -1,0 +1,14 @@
+{
+    "extends": "@pxlwidgets/tsconfig",
+    "compilerOptions": {
+        "baseUrl": "./",
+        "paths": {
+            "@app-database/*": ["src/database/*"],
+            "@app-graphql/*": ["src/graphql/*"],
+            "@app-types/*": ["src/types/*"]
+        },
+        "allowSyntheticDefaultImports": true,
+        "esModuleInterop": true
+    },
+    "include": ["src/**/*.ts"]
+}

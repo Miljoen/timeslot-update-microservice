@@ -1,0 +1,56 @@
+{
+  "name": "server-subscriptions-as3",
+  "version": "1.0.0",
+  "main": "src/index.ts",
+  "scripts": {
+    "start": "nodemon src/index.ts",
+    "lint": "eslint src/**",
+    "lint:fix": "eslint src/** --fix",
+    "typecheck": "tsc --skipLibCheck --noEmit",
+    "test": "jest"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=16"
+  },
+  "dependencies": {
+    "@graphql-tools/schema": "^8.3.1",
+    "@types/pg": "^8.6.1",
+    "apollo-server-express": "^3.5.0",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "graphql": "^16.0.0",
+    "graphql-subscriptions": "^2.0.0",
+    "nodemon": "^2.0.7",
+    "pg": "^8.6.0",
+    "subscriptions-transport-ws": "^0.11.0",
+    "tsconfig-paths": "^3.12.0"
+  },
+  "devDependencies": {
+    "@pxlwidgets/eslint-config": "^1.2.2",
+    "@pxlwidgets/tsconfig": "^1.0.2",
+    "@types/dotenv": "^8.2.0",
+    "@types/jsdom": "^16.2.13",
+    "@types/node": "^16.3.1",
+    "@types/ws": "^8.2.0",
+    "jest": "^27.3.1",
+    "sequelize-cli": "^6.2.0",
+    "ts-jest": "^27.0.7",
+    "ts-node": "^10.1.0",
+    "ts-node-dev": "^1.1.8",
+    "typescript": "^4.3.5"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "**/*.test.ts",
+      "**/*.spec.ts",
+      ".git",
+      "node_modules"
+    ],
+    "watch": [
+      "src"
+    ],
+    "exec": "node -r tsconfig-paths/register -r ts-node/register ./src/index.ts",
+    "ext": "ts, js"
+  }
+}

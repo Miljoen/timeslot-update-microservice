@@ -1,0 +1,36 @@
+{
+    "root": true,
+    "ignorePatterns": [
+        "*.js"
+    ],
+    "extends": [
+        "@pxlwidgets/eslint-config"
+    ],
+    "overrides": [
+        {
+            "files": [
+                "*.ts"
+            ],
+            "parserOptions": {
+                "project": [
+                    "tsconfig.json"
+                ],
+                "createDefaultProgram": true
+            },
+            "rules": {
+                "arrow-body-style": 0,
+                "@typescript-eslint/semi": [
+                    "error",
+                    "never"
+                ],
+                "@typescript-eslint/consistent-type-imports": [
+                    "error",
+                    {
+                        "prefer": "type-imports",
+                        "disallowTypeAnnotations": true
+                    }
+                ]
+            }
+        }
+    ]
+}
