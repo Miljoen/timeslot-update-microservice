@@ -4,7 +4,9 @@
 
 Microservice for sending timeslot related updates.
 
-Examples are placed orders that take up timeslot capacity.
+For example, orders are placed take up timeslot capacity.
+
+The microservice allows for real time updates to show remaining capacity.
 
 The purpose of this project is to offload any GraphQL Subscription traffic (Websockets) to a dedicated microservice.
 
