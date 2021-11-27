@@ -1,5 +1,5 @@
 export interface TimeslotUpdate {
-    timeslotId: number,
-    capacityAvailable: number,
-    capacityUsed: number,
+    timeslotId: number
+    capacityAvailable: number
+    capacityUsed: number
 }
